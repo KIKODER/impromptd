@@ -8,15 +8,27 @@
 </head>
 <body>
     <div id="app">
-        <div id="landing-screen">
+        <div id="landing-screen" class="screen active">
             <h1 class="land">MadderLibs!</h1>
             <button class="land">START GAME</button>
         </div>
 
-        <div id="theme-screen">
+        <div id="theme-screen" class="screen">
             <h2 class="theme">Choose your theme:</h2>
-            <input type="text" class="input theme">
+            <input type="text" class="input theme" placeholder="e.g., Murder Mystery">
             <button class="theme">GENERATE</button>
+        </div>
+
+        <div id="choice-screen" class="screen">
+            <h2 class="choice">Fill in the blanks:</h2>
+            <form id="placeholder-form"></form>
+            <button class="choice">Finish</button>
+        </div>
+
+        <div id="story-screen">
+            <h2 class="story">Your Story:</h2>
+            <p id="final-story"></p>
+            <button class="story">Play Again</button>
         </div>
     </div>
 

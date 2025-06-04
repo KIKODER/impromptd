@@ -1,6 +1,10 @@
-* {
+body {
     text-align: center;
     font-family: sans-serif;
+}
+
+#app {
+    padding: 2rem;
 }
 
 button {
@@ -35,3 +39,11 @@ button.theme {
     padding: 10px;
     margin-left: 10px;
 }
+
+/*.screen {
+    display: none;
+}*/
+  
+/*.screen.active {
+    display: block;
+}*/
