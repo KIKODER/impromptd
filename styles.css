@@ -40,10 +40,10 @@ button.theme {
     margin-left: 10px;
 }
 
-/*.screen {
+.screen {
     display: none;
-}*/
+}
   
-/*.screen.active {
+.screen.active {
     display: block;
-}*/
+}
