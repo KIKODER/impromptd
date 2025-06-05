@@ -1,7 +1,5 @@
-/* ===== IMPORTED GOOGLE FONT ===== */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
-/* ===== ROOT COLORS & VARIABLES ===== */
 :root {
   --accent-red: #ff6b6b;
   --accent-blue: #4dabf7;
@@ -11,7 +9,6 @@
   --text-dark: #222;
 }
 
-/* ===== GLOBAL STYLES ===== */
 body {
   text-align: center;
   font-family: 'Fredoka', sans-serif;
@@ -39,7 +36,6 @@ body {
   margin: 0 auto;
 }
 
-/* ===== HEADERS ===== */
 .land {
   font-weight: 900;
   margin: 4rem 1rem;
@@ -55,7 +51,6 @@ h1.land {
   animation: popIn 1s ease;
 }
 
-/* ===== BUTTONS ===== */
 button {
   border-radius: 40px;
   border: none;
@@ -86,7 +81,6 @@ button.theme {
   color: white;
 }
 
-/* ===== SCREEN ANIMATIONS ===== */
 .screen {
   display: none;
   opacity: 0;
@@ -100,7 +94,6 @@ button.theme {
   transform: scale(1);
 }
 
-/* ===== SIMPLE KEYFRAME ENTRANCE ===== */
 @keyframes popIn {
   0% {
     opacity: 0;
