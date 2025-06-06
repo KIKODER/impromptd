@@ -17,7 +17,11 @@ const randomThemes = [
   "A thriller where a giant rat terrorizes a coastal town's beach",
   "A romcom about two rival gay baristas in Queens, New York",
   "A courtroom drama between two blind lawyers",
-  "A musical set in Skid Row"
+  "A musical set in Skid Row",
+  "An emotional tale between a daughter and a really fat father",
+  "A coming-of-age story of five children fighting an old lady",
+  "A children's story of four animals escaping a zoo",
+  "An adventure of a Panda Bear learning BJJ"
 ];
 
 const themeInput = document.getElementById("theme-input");

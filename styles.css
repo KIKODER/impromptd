@@ -21,11 +21,11 @@ body {
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(255, 255, 255, 0.6); /* white overlay with 60% opacity */
-    z-index: -1;
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* white overlay with 60% opacity */
+  z-index: -1;
 }
 
 #app {
@@ -35,28 +35,28 @@ body::before {
 }
 
 .logo {
-    width: 100%;               /* Adjust size as needed */
-    max-width: 600px;
-    height: auto;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-    animation: popIn 1s ease; /* Same fade-in effect as before */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  animation: popIn 1s ease;
 }
 
 .landing-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem; /* spacing between items */
-    margin-top: 4rem;
-    animation: popIn 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: popIn 1s ease;
 }
   
 .callsign {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 900;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 button {
@@ -94,8 +94,8 @@ button.story {
 }
 
 button.theme {
-    background-color: var(--accent-green);
-  }
+  background-color: var(--accent-green);
+}
 
 button.choice {
   background-color: var(--accent-blue);
@@ -123,15 +123,15 @@ button.story {
   width: 60%;
   max-width: 400px;
   border-radius: 10px;
-  border: 2px solid var(--accent-blue);
+  border: 2px solid var(--accent-green);
 }
 
 .dice-btn {
-  font-size: 1.5rem;
-  padding: 0.8rem 1rem;
+  font-size: 2.5rem;
+  padding: 0.2rem 0.5rem;
   border: none;
   border-radius: 12px;
-  background-color: var(--accent-blue);
+  background-color: var(--accent-green);
   color: white;
   cursor: pointer;
   box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
@@ -163,7 +163,7 @@ button.story {
 #placeholder-form input {
   font-size: 1.5rem;
   padding: 1rem;
-  border: 3px solid #55e1ff;
+  border: 3px solid var(--text-dark);
   border-radius: 12px;
   margin: 2rem auto;
   display: block;
