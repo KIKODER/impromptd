@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
 :root {
-  --accent-red: #ff6b6b;
-  --accent-blue: #4dabf7;
-  --accent-green: #69db7c;
-  --accent-yellow: #ffe066;
+  --accent-red: #ff5555;
+  --accent-blue: #55e1ff;
+  --accent-green: #55ff64;
   --bg-light: #f8f9fa;
   --text-dark: #222;
 }
@@ -12,7 +11,7 @@
 body {
   text-align: center;
   font-family: 'Fredoka', sans-serif;
-  background-image: url('testvibe1.jpg'); /* Replace with your preferred file */
+  background-image: url('promptbg.png'); /* Replace with your preferred file */
   background-size: 600px auto;
   background-repeat: repeat;
   animation: scrollBackground 60s linear infinite;
@@ -21,13 +20,12 @@ body {
   padding: 0;
 }
 
-@keyframes scrollBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 600px 600px;
-  }
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* white overlay with 60% opacity */
+    z-index: -1;
 }
 
 #app {
@@ -45,7 +43,7 @@ h1.land {
   margin-top: 5rem;
   margin-bottom: 0.5rem;
   font-size: 4rem;
-  background: linear-gradient(to right, #ee2926, #ee5f8f, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41);
+  background: linear-gradient(to right, #ff5555, #55e1ff, #55ff64);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: popIn 1s ease;
@@ -69,17 +67,32 @@ button.land {
   font-size: 1.5rem;
   padding: 1rem 2rem;
   color: white;
-  background: linear-gradient(to left, #ee2926, #ee5f8f, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41);
+  background: linear-gradient(to left, #ff5555, #55e1ff, #55ff64);
+  border: solid 8px white;
 }
 
-button.theme {
+button.theme,
+button.choice, 
+button.story {
   font-size: 1rem;
   font-weight: 600;
   padding: 10px 20px;
   margin: 0.5rem;
-  background-color: var(--accent-blue);
   color: white;
+  border: solid 5px white;
 }
+
+button.theme {
+    background-color: var(--accent-green);
+  }
+
+button.choice {
+  background-color: var(--accent-blue);
+}
+
+button.story {
+    background-color: var(--accent-red);
+  }
 
 .screen {
   display: none;
@@ -103,4 +116,13 @@ button.theme {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@keyframes scrollBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 600px 600px;
+    }
 }
