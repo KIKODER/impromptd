@@ -18,21 +18,24 @@
         </div>
 
         <div id="theme-screen" class="screen">
-            <h2 class="theme">Choose your theme:</h2>
-            <input type="text" class="input theme" placeholder="e.g., Murder Mystery">
+            <h2 class="theme header">Choose your theme:</h2>
+            <div class="theme-input-group">
+                <input type="text" class="input theme" id="theme-input" placeholder="e.g., a funny Murder Mystery">
+                <button id="randomize-btn" class="dice-btn" title="Roll for a random theme!">🎲</button>
+            </div>
             <button class="theme">GENERATE</button>
         </div>
 
         <div id="choice-screen" class="screen">
-            <h2 class="choice">Fill in the blanks:</h2>
+            <h2 class="choice header">Fill in the blanks:</h2>
             <form id="placeholder-form"></form>
-            <button class="choice">Finish</button>
+            <button class="choice">ENTER</button>
         </div>
 
         <div id="story-screen" class="screen">
-            <h2 class="story">Your Story:</h2>
+            <h2 class="story header">Your Story:</h2>
             <p id="final-story"></p>
-            <button class="story">Play Again</button>
+            <button class="story">PLAY AGAIN</button>
         </div>
     </div>
 

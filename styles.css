@@ -78,7 +78,7 @@ button.land {
   font-weight: 600;
   padding: 1rem 2rem;
   color: white;
-  background: linear-gradient(to left, #ff5555, #55e1ff, #55ff64);
+  background: linear-gradient(to left, #050505, #353535);
   border: solid 8px white;
 }
 
@@ -102,8 +102,49 @@ button.choice {
 }
 
 button.story {
-    background-color: var(--accent-red);
-  }
+  background-color: var(--accent-red);
+}
+
+.header {
+  font-size: 3.5rem;
+}
+
+.theme-input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#theme-input {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-blue);
+}
+
+.dice-btn {
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--accent-blue);
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.dice-btn:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+#final-story {
+  font-size: 2rem;
+}
 
 .screen {
   display: none;
