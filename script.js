@@ -24,8 +24,22 @@ const themeInput = document.getElementById("theme-input");
 const randomizeBtn = document.getElementById("randomize-btn");
 
 randomizeBtn.addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * randomThemes.length);
-  themeInput.value = randomThemes[randomIndex];
+  let rollCount = 0;
+  const maxRolls = 10;
+  const rollSpeed = 40; // ms between rolls
+
+  const interval = setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * randomThemes.length);
+    themeInput.value = randomThemes[randomIndex];
+    rollCount++;
+
+    if (rollCount >= maxRolls) {
+      clearInterval(interval);
+
+      const finalIndex = Math.floor(Math.random() * randomThemes.length);
+      themeInput.value = randomThemes[finalIndex];
+    }
+  }, rollSpeed);
 });
 
 function generateStoryFields() {
