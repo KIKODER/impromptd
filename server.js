@@ -28,7 +28,7 @@ app.post('/api/generate-story', async (req, res) => {
       model: 'gpt-3.5-turbo',
       messages: [
         { role: 'system', content: 'You are a creative story generator for a Mad Libs-style game.' },
-        { role: 'user', content: `Generate a 8-12 line, funny or exciting mad-libs style story based on this theme: "${theme}". Use placeholders like {noun}, {verb}, {adverb}, {adjective}, etc., making sure the placeholders are in curly brackets (braces).` }
+        { role: 'user', content: `Generate a 5-10 line, funny or exciting mad-libs style story based on this theme: "${theme}". You could use placeholders like {noun}, {plural noun}, {verb}, {adverb}, {verb ending with -ing}, {adjective}, {time of day}, {emotion}, {animal}, etc. (pretty much anything that makes sense for a mad-libs story), making sure the placeholders are in curly brackets (braces). Remember, you don't have to include all of these placeholders in the story. Also, Do not start with "Once upon a..." for that is too cliche.` }
       ],
       max_tokens: 300
     });

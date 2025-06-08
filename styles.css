@@ -127,19 +127,14 @@ button.story {
 }
 
 .dice-btn {
-  font-size: 2.5rem;
-  padding: 0.2rem 0.5rem;
-  border: none;
-  border-radius: 12px;
-  background-color: var(--accent-green);
-  color: white;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
-  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
 }
 
 .dice-btn:hover {
-  transform: rotate(20deg) scale(1.1);
+  transform: rotate(30deg) scale(1.5);
 }
 
 .progress-bar-container {
@@ -161,11 +156,11 @@ button.story {
 }
 
 #placeholder-form input {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem;
-  border: 3px solid var(--text-dark);
+  border: 5px solid var(--text-dark);
   border-radius: 12px;
-  margin: 2rem auto;
+  margin: 0.5rem;
   display: block;
   width: 80%;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
