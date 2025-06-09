@@ -25,7 +25,7 @@ body.dark-mode {
   background-image: url('Bg-dark.png');
 }
 
-body.dark-mode .callsign,
+body.dark-mode .footer,
 body.dark-mode h2,
 body.dark-mode p {
   color: var(--bg-light);
@@ -66,8 +66,7 @@ body.dark-mode::before {
   width: 100%;
   max-width: 600px;
   height: auto;
-  margin-top: 5rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
   animation: popIn 1s ease;
 }
 
@@ -76,15 +75,20 @@ body.dark-mode::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
   animation: popIn 1s ease;
 }
   
-.callsign {
-  margin-top: 4rem;
+.footer {
+  margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: 900;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0, 1rem;
 }
 
 button {
@@ -97,7 +101,7 @@ button {
 }
 
 button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
 }
 

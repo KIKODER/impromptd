@@ -16,6 +16,10 @@ themeToggle.addEventListener('click', () => {
   } else {
     themeToggle.textContent = '🌙';
   }
+  // Update icons based on mode
+  const isDark = document.body.classList.contains('dark-mode');
+  document.getElementById('youtube-icon').src = isDark ? 'YTDark.png' : 'YTLite.png';
+  document.getElementById('github-icon').src = isDark ? 'GithubDark.png' : 'GithubLite.png';
 });
 
 function showThemeInput() {
