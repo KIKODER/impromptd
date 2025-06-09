@@ -115,15 +115,32 @@ button.story {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  width: 100%;
+  max-width: 1200px; /* Increase this to your liking */
+  padding: 0 2rem; /* optional: adds some breathing room on the sides */
+  box-sizing: border-box;
 }
 
 #theme-input {
   padding: 0.8rem;
   font-size: 1.2rem;
-  width: 60%;
-  max-width: 400px;
+  width: 100%;
+  max-width: none;
   border-radius: 10px;
-  border: 2px solid var(--accent-green);
+  border: 2px solid var(--text-dark);
+}
+
+.theme-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.theme.header {
+  margin-bottom: 8rem;
 }
 
 .dice-btn {
