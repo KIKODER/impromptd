@@ -11,13 +11,18 @@
 body {
   text-align: center;
   font-family: 'Fredoka', sans-serif;
-  background-image: url('promptbg.png'); /* Replace with your preferred file */
-  background-size: 600px auto;
+  background-image: url('promptbg.png');
+  background-size: contain;
   background-repeat: repeat;
+  background-position: center;
   animation: scrollBackground 60s linear infinite;
   color: var(--text-dark);
   margin: 0;
   padding: 0;
+}
+
+body.dark-mode {
+  background-image: url('Bg-dark.png');
 }
 
 body::before {
@@ -28,10 +33,27 @@ body::before {
   z-index: -1;
 }
 
+body.dark-mode::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 #app {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 5px 10px;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .logo {

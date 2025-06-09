@@ -5,6 +5,19 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
 }
 
+const themeToggle = document.getElementById('toggle-theme');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  // Optional: toggle icon
+  if (document.body.classList.contains('dark-mode')) {
+    themeToggle.textContent = '☀️';
+  } else {
+    themeToggle.textContent = '🌙';
+  }
+});
+
 function showThemeInput() {
   showScreen('theme-screen');
 }
