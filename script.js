@@ -34,11 +34,11 @@ const randomThemes = [
   "A thriller where a giant-ass rat terrorizes a coastal town's beach",
   "A romcom about two rival gay baristas in Queens, New York",
   "A courtroom drama between two blind lawyers",
-  "A musical set in Skid Row",
+  "A musical set in Skid Row written by Lin-Manuel Miranda",
   "An emotional tale between a daughter and her really fat father",
   "A coming-of-age story of five children fighting an old lady",
   "A story of four animals escaping a zoo and escaping to Africa",
-  "An adventure of a chosen Panda Bear learning BJJ"
+  "An adventure of a chosen Polar Bear learning BJJ"
 ];
 
 const themeInput = document.getElementById("theme-input");

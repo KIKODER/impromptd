@@ -66,7 +66,7 @@ body.dark-mode::before {
   width: 100%;
   max-width: 600px;
   height: auto;
-  margin-top: 0.5rem;
+  margin-top: -2rem;
   animation: popIn 1s ease;
 }
 
@@ -238,10 +238,14 @@ button.story {
   margin: 0.5rem auto;
   font-size: 1.5rem;
   line-height: 1.6;
+
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 #final-story {
   font-size: 2rem;
+  white-space: pre-wrap;
 }
 
 .screen {
