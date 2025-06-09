@@ -5,14 +5,14 @@
   --accent-blue: #55e1ff;
   --accent-green: #55ff64;
   --bg-light: #f8f9fa;
-  --text-dark: #222;
+  --text-dark: #0f0f0f;
 }
 
 body {
   text-align: center;
   font-family: 'Fredoka', sans-serif;
   background-image: url('promptbg.png');
-  background-size: contain;
+  background-size: 600px 600px;
   background-repeat: repeat;
   background-position: center;
   animation: scrollBackground 60s linear infinite;
@@ -23,6 +23,12 @@ body {
 
 body.dark-mode {
   background-image: url('Bg-dark.png');
+}
+
+body.dark-mode .callsign,
+body.dark-mode h2,
+body.dark-mode p {
+  color: var(--bg-light);
 }
 
 body::before {
@@ -99,9 +105,15 @@ button.land {
   font-size: 1.5rem;
   font-weight: 600;
   padding: 1rem 2rem;
-  color: white;
-  background: linear-gradient(to left, #050505, #353535);
-  border: solid 8px white;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  border: solid 8px var(--text-dark);
+}
+
+body.dark-mode button.land {
+  color: var(--bg-light);
+  background: var(--text-dark);
+  border: solid 8px var(--bg-light);
 }
 
 button.theme,
