@@ -67,7 +67,7 @@ body.dark-mode::before {
   max-width: 600px;
   height: auto;
   margin-top: -2rem;
-  animation: popIn 1s ease;
+  animation: popIn 1s ease, gentle-tilt 4s ease-in-out infinite;
 }
 
 .landing-content {
@@ -279,4 +279,12 @@ button.story {
     100% {
       background-position: 600px 600px;
     }
+}
+
+@keyframes gentle-tilt {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-2deg); }
+  50%  { transform: rotate(2deg); }
+  75%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
 }
