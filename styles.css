@@ -162,6 +162,7 @@ button.story {
 #theme-input {
   padding: 0.8rem;
   font-size: 1.2rem;
+  font-weight: 600;
   width: 100%;
   max-width: none;
   border-radius: 10px;
@@ -210,12 +211,19 @@ button.story {
   border-radius: 10px 0 0 10px;
 }
 
+#placeholder-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
 #placeholder-form input {
   font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
   padding: 1rem;
   border: 5px solid var(--text-dark);
   border-radius: 12px;
-  margin: 0.5rem;
+  margin: 10px auto;
   display: block;
   width: 80%;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);

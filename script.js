@@ -37,7 +37,7 @@ const randomThemes = [
   "A musical set in Skid Row",
   "An emotional tale between a daughter and her really fat father",
   "A coming-of-age story of five children fighting an old lady",
-  "A children's story of four animals escaping a zoo and escaping to Africa",
+  "A story of four animals escaping a zoo and escaping to Africa",
   "An adventure of a chosen Panda Bear learning BJJ"
 ];
 
@@ -75,7 +75,7 @@ function generateStoryFieldsFromText(story) {
     const input = document.createElement('input');
     input.type = 'text';
     input.name = `placeholder-${index}`;
-    input.placeholder = `Enter a ${placeholder}`;
+    input.placeholder = placeholder.charAt(0).toUpperCase() + placeholder.slice(1);;
     form.appendChild(input);
     form.appendChild(document.createElement('br'));
   });
