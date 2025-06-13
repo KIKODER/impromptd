@@ -84,6 +84,22 @@ body.dark-mode::before {
   font-weight: 900;
 }
 
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.branding p {
+  margin: 0;
+}
+
+#kiko-icon {
+  width: 40px;
+  height: 32px;
+}
+
 .icon {
   width: 40px;
   height: 40px;
