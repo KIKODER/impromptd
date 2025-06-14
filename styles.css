@@ -6,7 +6,7 @@
   --accent-blue: #55e1ff;
   --accent-blue-op: #55e1ffb3;
   --accent-green: #55ff64;
-  --accent-green-op: #55ff64b3;
+  --accent-green-op: rgba(85, 255, 100, 0.8);
   --bg-light: #f8f9fa;
   --text-dark: #0f0f0f;
 }
@@ -160,26 +160,34 @@ button.story {
   padding: 10px 20px;
   margin: 0.5rem;
   color: var(--text-dark);
-  border: solid 5px var(--text-dark);
+  background-color: rgba(248, 249, 250, 0.7);
+  border: solid 4px var(--text-dark);
 }
 
 body.dark-mode button.theme,
-button.choice, 
-button.story {
+body.dark-mode button.choice, 
+body.dark-mode button.story {
   color: var(--bg-light);
-  border: solid 5px var(--bg-light);
+  background-color: rgb(15, 15, 15, 0.6);
+  border: solid 4px var(--bg-light);
 }
 
-button.theme {
-  background-color: var(--accent-green-op);
+button.theme:hover, 
+body.dark-mode button.theme:hover {
+  border: solid 4px var(--accent-green);
+  color: var(--accent-green);
 }
 
-button.choice {
-  background-color: var(--accent-blue-op);
+button.choice:hover,
+body.dark-mode button.choice:hover {
+  border: solid 4px var(--accent-blue);
+  color: var(--accent-blue);
 }
 
-button.story {
-  background-color: var(--accent-red-op);
+button.story:hover,
+body.dark-mode button.story:hover {
+  border: solid 4px var(--accent-red);
+  color: var(--accent-red);
 }
 
 .header {
@@ -205,7 +213,7 @@ button.story {
   width: 100%;
   max-width: none;
   border-radius: 10px;
-  border: 2px solid var(--text-dark);
+  border: 3px solid var(--text-dark);
 }
 
 .theme-content {
@@ -222,8 +230,8 @@ button.story {
 }
 
 .dice-btn {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -269,7 +277,7 @@ button.story {
 }
 
 #final-story {
-  font-size: 2rem;
+  font-size: 1.5rem;
   white-space: pre-wrap;
 }
 
