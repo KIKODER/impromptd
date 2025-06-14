@@ -2,8 +2,11 @@
 
 :root {
   --accent-red: #ff5555;
+  --accent-red-op: #ff5555b3;
   --accent-blue: #55e1ff;
+  --accent-blue-op: #55e1ffb3;
   --accent-green: #55ff64;
+  --accent-green-op: #55ff64b3;
   --bg-light: #f8f9fa;
   --text-dark: #0f0f0f;
 }
@@ -84,6 +87,10 @@ body.dark-mode::before {
   font-weight: 900;
 }
 
+.footer-icons {
+  margin: 15px;
+}
+
 .branding {
   display: flex;
   align-items: center;
@@ -100,11 +107,20 @@ body.dark-mode::before {
   height: 32px;
 }
 
+#youtube-icon, 
+#github-icon {
+  margin: 0px 10px;
+}
+
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
-  margin: 0, 1rem;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.5);
 }
 
 button {
@@ -126,13 +142,13 @@ button.land {
   font-weight: 600;
   padding: 1rem 2rem;
   color: var(--text-dark);
-  background: var(--bg-light);
+  background-color: rgba(248, 249, 250, 0.7);
   border: solid 8px var(--text-dark);
 }
 
 body.dark-mode button.land {
   color: var(--bg-light);
-  background: var(--text-dark);
+  background-color: rgb(15, 15, 15, 0.6);
   border: solid 8px var(--bg-light);
 }
 
@@ -143,20 +159,27 @@ button.story {
   font-weight: 600;
   padding: 10px 20px;
   margin: 0.5rem;
-  color: white;
-  border: solid 5px white;
+  color: var(--text-dark);
+  border: solid 5px var(--text-dark);
+}
+
+body.dark-mode button.theme,
+button.choice, 
+button.story {
+  color: var(--bg-light);
+  border: solid 5px var(--bg-light);
 }
 
 button.theme {
-  background-color: var(--accent-green);
+  background-color: var(--accent-green-op);
 }
 
 button.choice {
-  background-color: var(--accent-blue);
+  background-color: var(--accent-blue-op);
 }
 
 button.story {
-  background-color: var(--accent-red);
+  background-color: var(--accent-red-op);
 }
 
 .header {
@@ -209,22 +232,8 @@ button.story {
   transform: rotate(30deg) scale(1.5);
 }
 
-.progress-bar-container {
-  width: 80%;
-  height: 20px;
-  background-color: #eee;
-  border-radius: 10px;
-  margin: 1rem auto;
-  overflow: hidden;
-  border: 2px solid #ccc;
-}
-
-.progress-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(to right, #55e1ff, #55ff64);
-  transition: width 0.3s ease;
-  border-radius: 10px 0 0 10px;
+.dice-btn:active {
+  transform: rotate(-45deg);
 }
 
 #placeholder-form {
