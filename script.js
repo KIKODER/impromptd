@@ -100,8 +100,10 @@ function restart() {
 
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelector('button.land').addEventListener('click', showThemeInput);
+  const loadingIndicator = document.getElementById('loading-indicator');
 
   document.querySelector('button.theme').addEventListener('click', async () => {
+    loadingIndicator.classList.remove('hidden');
     const themeInputValue = document.querySelector('.input.theme').value.trim();
     if (!themeInputValue) return;
 
@@ -127,6 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
       console.error(err);
       alert('Error contacting AI server.');
     }
+    loadingIndicator.classList.add('hidden');
   });
 
   document.querySelector('button.choice').addEventListener('click', showFinalStory);

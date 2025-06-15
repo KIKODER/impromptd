@@ -2,13 +2,13 @@
 
 :root {
   --accent-red: #ff5555;
-  --accent-red-op: #ff5555b3;
   --accent-blue: #55e1ff;
-  --accent-blue-op: #55e1ffb3;
   --accent-green: #55ff64;
-  --accent-green-op: rgba(85, 255, 100, 0.8);
   --bg-light: #f8f9fa;
+  --bg-light-op: rgba(248, 249, 250, 0.7);
   --text-dark: #0f0f0f;
+  --text-dark-op: rgba(15, 15, 15, 0.6);
+  --shadow: rgba(15, 15, 15, 0.4);
 }
 
 body {
@@ -38,12 +38,12 @@ body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6); /* white overlay with 60% opacity */
+  background-color: var(--bg-light-op); /* white overlay with 60% opacity */
   z-index: -1;
 }
 
 body.dark-mode::before {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--text-dark-op);
 }
 
 #app {
@@ -54,13 +54,13 @@ body.dark-mode::before {
 
 .theme-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
   padding: 5px 10px;
   border: none;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
+  background: var(--text-dark-op);
+  color: var(--bg-light);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -142,13 +142,13 @@ button.land {
   font-weight: 600;
   padding: 1rem 2rem;
   color: var(--text-dark);
-  background-color: rgba(248, 249, 250, 0.7);
+  background-color: var(--bg-light-op);
   border: solid 8px var(--text-dark);
 }
 
 body.dark-mode button.land {
   color: var(--bg-light);
-  background-color: rgb(15, 15, 15, 0.6);
+  background-color: var(--text-dark-op);
   border: solid 8px var(--bg-light);
 }
 
@@ -160,7 +160,7 @@ button.story {
   padding: 10px 20px;
   margin: 0.5rem;
   color: var(--text-dark);
-  background-color: rgba(248, 249, 250, 0.7);
+  background-color: var(--bg-light-op);
   border: solid 4px var(--text-dark);
 }
 
@@ -168,7 +168,7 @@ body.dark-mode button.theme,
 body.dark-mode button.choice, 
 body.dark-mode button.story {
   color: var(--bg-light);
-  background-color: rgb(15, 15, 15, 0.6);
+  background-color: var(--text-dark-op);
   border: solid 4px var(--bg-light);
 }
 
@@ -192,6 +192,19 @@ body.dark-mode button.story:hover {
 
 .header {
   font-size: 3.5rem;
+  text-shadow: 4px 4px 4px var(--shadow);
+}
+
+.green {
+  color: var(--accent-green);
+}
+
+.blue {
+  color: var(--accent-blue);
+}
+
+.red {
+  color: var(--accent-red);
 }
 
 .theme-input-group {
@@ -214,6 +227,12 @@ body.dark-mode button.story:hover {
   max-width: none;
   border-radius: 10px;
   border: 3px solid var(--text-dark);
+  background-color: var(--bg-light-op);
+}
+
+body.dark-mode #theme-input {
+  background-color: var(--text-dark-op);
+  color: var(--bg-light);
 }
 
 .theme-content {
@@ -244,6 +263,19 @@ body.dark-mode button.story:hover {
   transform: rotate(-45deg);
 }
 
+.loading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-green);
+  margin-top: 1rem;
+  animation: pulse 1.2s infinite;
+  text-shadow: 4px 4px 4px var(--shadow);
+}
+
+.hidden {
+  display: none;
+}
+
 #placeholder-form {
   text-align: center;
   margin-top: 20px;
@@ -255,6 +287,7 @@ body.dark-mode button.story:hover {
   text-align: center;
   padding: 1rem;
   border: 5px solid var(--text-dark);
+  background-color: var(--bg-light-op);
   border-radius: 12px;
   margin: 10px auto;
   display: block;
@@ -262,9 +295,14 @@ body.dark-mode button.story:hover {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+body.dark-mode #placeholder-form input {
+  background-color: var(--text-dark-op);
+  color: var(--bg-light);
+}
+
 .story-container {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: var(--text-dark-op);
+  color: var(--bg-light);
   padding: 2rem;
   border-radius: 20px;
   max-width: 90%;
@@ -320,4 +358,10 @@ body.dark-mode button.story:hover {
   50%  { transform: rotate(2deg); }
   75%  { transform: rotate(-2deg); }
   100% { transform: rotate(0deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
 }

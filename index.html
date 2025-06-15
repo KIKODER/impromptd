@@ -33,23 +33,26 @@
 
         <div id="theme-screen" class="screen">
             <div class="theme-content">
-                <h2 class="theme header">Choose your theme:</h2>
+                <h2 class="theme header">Choose your <span class="green">theme:</span></h2>
                 <div class="theme-input-group">
                     <input type="text" class="input theme" id="theme-input" placeholder="e.g., a funny Murder Mystery">
                     <img src="Dice.png" id="randomize-btn" alt="Roll Dice" class="dice-btn" />
                 </div>
                 <button class="theme">GENERATE</button>
+                <div id="loading-indicator" class="loading hidden gen">
+                  <p>Generating your story...</p>
+                </div>
             </div>   
         </div>
 
         <div id="choice-screen" class="screen">
-            <h2 class="choice header">Fill in the blanks:</h2>
+            <h2 class="choice header">Fill in the <span class="blue">blanks:</span></h2>
             <form id="placeholder-form"></form>
             <button class="choice">ENTER</button>
         </div>
 
         <div id="story-screen" class="screen">
-            <h2 class="story header">Your Story:</h2>
+            <h2 class="story header">Your <span class="red">Story:</span></h2>
             <div class="story-container">
                 <p id="final-story"></p>
             </div>
