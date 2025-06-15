@@ -1,3 +1,7 @@
+/* --------------------------------------------- */
+/*                 Imports & Root                */
+/* --------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
 :root {
@@ -10,6 +14,10 @@
   --text-dark-op: rgba(15, 15, 15, 0.6);
   --shadow: rgba(15, 15, 15, 0.4);
 }
+
+/* --------------------------------------------- */
+/*               Base Body Styling               */
+/* --------------------------------------------- */
 
 body {
   text-align: center;
@@ -38,7 +46,7 @@ body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: var(--bg-light-op); /* white overlay with 60% opacity */
+  background-color: var(--bg-light-op);
   z-index: -1;
 }
 
@@ -46,11 +54,19 @@ body.dark-mode::before {
   background-color: var(--text-dark-op);
 }
 
+/* --------------------------------------------- */
+/*                 App Container                 */
+/* --------------------------------------------- */
+
 #app {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
+
+/* --------------------------------------------- */
+/*               Theme Toggle Button             */
+/* --------------------------------------------- */
 
 .theme-toggle {
   position: fixed;
@@ -64,6 +80,10 @@ body.dark-mode::before {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* --------------------------------------------- */
+/*               Landing Page Styles             */
+/* --------------------------------------------- */
 
 .logo {
   width: 100%;
@@ -80,7 +100,7 @@ body.dark-mode::before {
   justify-content: center;
   animation: popIn 1s ease;
 }
-  
+
 .footer {
   margin-top: 1.5rem;
   font-size: 1.2rem;
@@ -90,6 +110,10 @@ body.dark-mode::before {
 .footer-icons {
   margin: 15px;
 }
+
+/* --------------------------------------------- */
+/*               Branding & Icons                */
+/* --------------------------------------------- */
 
 .branding {
   display: flex;
@@ -122,6 +146,10 @@ body.dark-mode::before {
 .icon:hover {
   transform: scale(1.5);
 }
+
+/* --------------------------------------------- */
+/*               Buttons & Variants              */
+/* --------------------------------------------- */
 
 button {
   border-radius: 40px;
@@ -172,6 +200,7 @@ body.dark-mode button.story {
   border: solid 4px var(--bg-light);
 }
 
+/* Button Hover Color Variants */
 button.theme:hover, 
 body.dark-mode button.theme:hover {
   border: solid 4px var(--accent-green);
@@ -190,22 +219,9 @@ body.dark-mode button.story:hover {
   color: var(--accent-red);
 }
 
-.header {
-  font-size: 3.5rem;
-  text-shadow: 4px 4px 4px var(--shadow);
-}
-
-.green {
-  color: var(--accent-green);
-}
-
-.blue {
-  color: var(--accent-blue);
-}
-
-.red {
-  color: var(--accent-red);
-}
+/* --------------------------------------------- */
+/*               Input & Theme Screen            */
+/* --------------------------------------------- */
 
 .theme-input-group {
   display: flex;
@@ -214,8 +230,8 @@ body.dark-mode button.story:hover {
   gap: 0.5rem;
   margin-bottom: 1rem;
   width: 100%;
-  max-width: 1200px; /* Increase this to your liking */
-  padding: 0 2rem; /* optional: adds some breathing room on the sides */
+  max-width: 1200px;
+  padding: 0 2rem;
   box-sizing: border-box;
 }
 
@@ -224,7 +240,6 @@ body.dark-mode button.story:hover {
   font-size: 1.2rem;
   font-weight: 600;
   width: 100%;
-  max-width: none;
   border-radius: 10px;
   border: 3px solid var(--text-dark);
   background-color: var(--bg-light-op);
@@ -248,6 +263,10 @@ body.dark-mode #theme-input {
   margin-bottom: 8rem;
 }
 
+/* --------------------------------------------- */
+/*               Dice Button                     */
+/* --------------------------------------------- */
+
 .dice-btn {
   width: 70px;
   height: 70px;
@@ -263,18 +282,9 @@ body.dark-mode #theme-input {
   transform: rotate(-45deg);
 }
 
-.loading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--accent-green);
-  margin-top: 1rem;
-  animation: pulse 1.2s infinite;
-  text-shadow: 4px 4px 4px var(--shadow);
-}
-
-.hidden {
-  display: none;
-}
+/* --------------------------------------------- */
+/*              Placeholder Input Form           */
+/* --------------------------------------------- */
 
 #placeholder-form {
   text-align: center;
@@ -300,6 +310,10 @@ body.dark-mode #placeholder-form input {
   color: var(--bg-light);
 }
 
+/* --------------------------------------------- */
+/*                 Story Output                  */
+/* --------------------------------------------- */
+
 .story-container {
   background-color: var(--text-dark-op);
   color: var(--bg-light);
@@ -316,6 +330,48 @@ body.dark-mode #placeholder-form input {
   white-space: pre-wrap;
 }
 
+/* --------------------------------------------- */
+/*               Utility Classes                 */
+/* --------------------------------------------- */
+
+.header {
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 4px var(--shadow);
+}
+
+.green {
+  color: var(--accent-green);
+}
+
+.blue {
+  color: var(--accent-blue);
+}
+
+.red {
+  color: var(--accent-red);
+}
+
+.hidden {
+  display: none;
+}
+
+/* --------------------------------------------- */
+/*               Loading Indicator               */
+/* --------------------------------------------- */
+
+.loading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-green);
+  margin-top: 1rem;
+  animation: pulse 1.2s infinite;
+  text-shadow: 4px 4px 4px var(--shadow);
+}
+
+/* --------------------------------------------- */
+/*                  Screen Transitions           */
+/* --------------------------------------------- */
+
 .screen {
   display: none;
   opacity: 0;
@@ -329,6 +385,10 @@ body.dark-mode #placeholder-form input {
   transform: scale(1);
 }
 
+/* --------------------------------------------- */
+/*                Animations                     */
+/* --------------------------------------------- */
+
 @keyframes popIn {
   0% {
     opacity: 0;
@@ -341,12 +401,12 @@ body.dark-mode #placeholder-form input {
 }
 
 @keyframes scrollBackground {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 600px 600px;
-    }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 600px 600px;
+  }
 }
 
 @keyframes gentle-tilt {
