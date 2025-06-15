@@ -28,9 +28,9 @@ app.post('/api/generate-story', async (req, res) => {
       model: 'gpt-3.5-turbo',
       messages: [
         { role: 'system', content: 'You are a creative story generator for a Mad Libs-style game.' },
-        { role: 'user', content: `Generate a short, funny or exciting mad-libs style story based on this theme: "${theme}". You could use placeholders like {noun}, {plural noun}, {verb}, {adverb}, {verb ending with -ing}, {adjective}, {time of day}, {emotion}, {animal}, etc. (pretty much anything that makes sense for a mad-libs story), making sure the placeholders are in curly brackets (braces). Remember, you don't have to include all of these placeholders in the story. Also, Do not start with "Once upon a..." for that is too cliche. Also, please include a lot of placeholders, with at least one or two every sentence.` }
+        { role: 'user', content: `Generate a short and funny mad-libs style story based on this theme: "${theme}". You could use placeholders like {noun}, {plural noun}, {verb}, {adverb}, {verb ending with -ing}, {adjective}, {time of day}, {emotion}, {animal}, etc. (pretty much anything that makes sense for a mad-libs story), making sure the placeholders are in curly brackets (braces). I would suggest creating the complete story, THEN replacing the correct words with their parts of speech. Remember, you don't have to include all of these placeholders in the story. Also, Do not start with "Once upon a..." for that is too cliche. Also, please include a lot of placeholders, with at least one or two every sentence.` }
       ],
-      max_tokens: 300
+      max_tokens: 500
     });
 
     const story = completion.choices[0].message.content;
