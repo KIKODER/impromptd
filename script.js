@@ -5,6 +5,13 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
 }
 
+const colors = ["red", "green", "blue"];
+
+function wrapWithColor(word) {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  return `<span class="${randomColor}">${word}</span>`;
+}
+
 const themeToggle = document.getElementById('toggle-theme');
 
 themeToggle.addEventListener('click', () => {
@@ -87,10 +94,11 @@ function showFinalStory() {
   let finalStory = storyTemplate;
 
   inputs.forEach(input => {
-    finalStory = finalStory.replace(/{.*?}/, input.value);
+    const coloredWord = wrapWithColor(input.value); // ← this line wraps the value with a random class
+    finalStory = finalStory.replace(/{.*?}/, coloredWord);
   });
 
-  document.getElementById('final-story').innerText = finalStory;
+  document.getElementById('final-story').innerHTML = finalStory;
   showScreen('story-screen');
 }
 

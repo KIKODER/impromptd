@@ -22,7 +22,7 @@
 body {
   text-align: center;
   font-family: 'Fredoka', sans-serif;
-  background-image: url('promptbg.png');
+  background-image: url('assets/promptbg.png');
   background-size: 600px 600px;
   background-repeat: repeat;
   background-position: center;
@@ -33,7 +33,7 @@ body {
 }
 
 body.dark-mode {
-  background-image: url('Bg-dark.png');
+  background-image: url('assets/Bg-dark.png');
 }
 
 body.dark-mode .footer,
