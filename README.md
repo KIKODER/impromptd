@@ -1,5 +1,5 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](https://github.com/KIKODER/impromptd/blob/main/assets/Title-dark.png?raw=true)
 
 
 # Imprompt'd
@@ -10,7 +10,9 @@
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/KIKODER/impromptd/blob/main/assets/impromptdlanding.png?raw=true)
+![App Screenshot](https://github.com/KIKODER/impromptd/blob/main/assets/themescreen2.png?raw=true)
+![App Screenshot](https://github.com/KIKODER/impromptd/blob/main/assets/storyscreen.png?raw=true)
 
 
 ## Features
