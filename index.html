@@ -12,8 +12,8 @@
         <button id="toggle-theme" class="theme-toggle">🌙</button>
         <div id="landing-screen" class="screen active">
             <div class="landing-content">
-              <img src="assets/Title-dark.png" alt="Imprompt'd Logo" class="logo" />
-              <p id="splash-text" class="splash-text"></p>
+              <img src="assets/Title-dark.png" alt="Imprompt'd Logo" class="logo shadow" />
+              <p id="splash-text" class="splash-text shadow"></p>
               <button class="land">START GAME</button>
               <footer class="footer land">
                 <div class="branding">
@@ -37,7 +37,10 @@
                 <h2 class="theme header">Choose your <span class="green">theme:</span></h2>
                 <div class="theme-input-group">
                     <input type="text" class="input theme" id="theme-input" placeholder="e.g., a funny Murder Mystery">
-                    <img src="assets/Dice.png" id="randomize-btn" alt="Roll Dice" class="dice-btn" />
+                    <div class="dice-container">
+                      <p class="dice-label shadow"><span class="red">Ran</span><span class="green">dom</span><span class="blue">ize</span>!</p>
+                      <img src="assets/Dice.png" id="randomize-btn" alt="Roll Dice" class="dice-btn shadow" />
+                    </div>
                 </div>
                 <button class="theme">GENERATE</button>
                 <div id="loading-indicator" class="loading hidden gen">

@@ -271,6 +271,7 @@ body.dark-mode #theme-input {
 .dice-btn {
   width: 70px;
   height: 70px;
+  margin-top: -1.8rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -281,6 +282,13 @@ body.dark-mode #theme-input {
 
 .dice-btn:active {
   transform: rotate(-45deg);
+}
+
+.dice-label {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: -15px;
 }
 
 /* --------------------------------------------- */
@@ -356,17 +364,34 @@ body.dark-mode #placeholder-form input {
   display: none;
 }
 
+.shadow {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.418));
+}
+
 /* --------------------------------------------- */
 /*               Splash Text                     */
 /* --------------------------------------------- */
 
 .splash-text {
-  font-size: 2rem;
+  font-size: 28px;
   font-weight: bold;
-  margin-top: -6rem;
+  margin-top: -4rem;
   margin-bottom: 8rem;
-  animation: splash-bob 3s ease-in-out infinite;
-  color: var(--text-dark); /* base color; colored spans override this */
+  animation: popIn 1s ease, splash-bob 3s ease-in-out infinite;
+  color: var(--text-dark);
+}
+
+/* --------------------------------------------- */
+/*               Loading Indicator               */
+/* --------------------------------------------- */
+
+.loading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-green);
+  margin-top: 1rem;
+  animation: pulse 1.2s infinite;
+  text-shadow: 4px 4px 4px var(--shadow);
 }
 
 /* --------------------------------------------- */
@@ -427,12 +452,10 @@ body.dark-mode #placeholder-form input {
 @keyframes splash-bob {
   0%, 100% {
     transform: translateY(0);
-    opacity: 0.7;
     transform: scale(0.95)
   }
   50% {
     transform: translateY(-5px);
-    opacity: 1;
     transform: scale(1)
   }
 }

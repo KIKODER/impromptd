@@ -1,6 +1,7 @@
 {
   "name": "madder-libs",
   "version": "1.0.0",
+  "type": "module",
   "description": "An online-based 'Mad Libs' variant that implements multiplayer and AI.",
   "main": "script.js",
   "scripts": {
