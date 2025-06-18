@@ -12,6 +12,27 @@ function wrapWithColor(word) {
   return `<span class="${randomColor}">${word}</span>`;
 }
 
+const splashPhrases = [
+  "He [VERB ENDING WITH -ED] his buddy's [NOUN]???",
+  "The [ADJECTIVE] butler whipped out his [ADJECTIVE] [NOUN].",
+  "She's never seen so many freaking [PLURAL ANIMAL] in [PLACE] before!",
+  "That [ADJECTIVE] ghost just [VERB ENDING WITH -ED] my [NOUN]!",
+  "They [VERB] together until the [TIME OF DAY] with their [PLURAL NOUN].",
+  "He said he wouldn't touch that [NOUN] with a ten foot [NOUN]!",
+  "She was making him [EMOTION] just by [VERB ENDING WITH -ED]"
+];
+
+function getRandomSplashPhrase() {
+  const colors = ['red', 'green', 'blue']; // Correspond to your CSS classes
+  const phrase = splashPhrases[Math.floor(Math.random() * splashPhrases.length)];
+
+  // Replace [PLACEHOLDER] with a random colored span
+  return phrase.replace(/\[(.*?)\]/g, (_, word) => {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    return `<span class="${color}">[${word}]</span>`;
+  });
+}
+
 const themeToggle = document.getElementById('toggle-theme');
 
 themeToggle.addEventListener('click', () => {
@@ -25,9 +46,9 @@ themeToggle.addEventListener('click', () => {
   }
   // Update icons based on mode
   const isDark = document.body.classList.contains('dark-mode');
-  document.getElementById('kiko-icon').src = isDark ? 'KikoDark.png' : 'KikoLite.png';
-  document.getElementById('youtube-icon').src = isDark ? 'YTDark.png' : 'YTLite.png';
-  document.getElementById('github-icon').src = isDark ? 'GithubDark.png' : 'GithubLite.png';
+  document.getElementById('kiko-icon').src = isDark ? 'assets/KikoDark.png' : 'assets/KikoLite.png';
+  document.getElementById('youtube-icon').src = isDark ? 'assets/YTDark.png' : 'assets/YTLite.png';
+  document.getElementById('github-icon').src = isDark ? 'assets/GithubDark.png' : 'assets/GithubLite.png';
 });
 
 function showThemeInput() {
@@ -107,6 +128,8 @@ function restart() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  const splashEl = document.getElementById('splash-text');
+  if (splashEl) splashEl.innerHTML = getRandomSplashPhrase();
   document.querySelector('button.land').addEventListener('click', showThemeInput);
   const loadingIndicator = document.getElementById('loading-indicator');
 
