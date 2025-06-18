@@ -89,7 +89,8 @@ body.dark-mode::before {
   width: 100%;
   max-width: 600px;
   height: auto;
-  margin-top: -2rem;
+  margin-top: 12rem;
+  margin-bottom: 8rem;
   animation: popIn 1s ease, gentle-tilt 4s ease-in-out infinite;
 }
 

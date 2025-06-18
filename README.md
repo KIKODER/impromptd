@@ -10,8 +10,11 @@
 
 ## Screenshots
 
+**Landing Screen:**
 ![App Screenshot](https://github.com/KIKODER/impromptd/blob/main/assets/impromptdlanding.png?raw=true)
+**Theme Input Screen:**
 ![App Screenshot](https://github.com/KIKODER/impromptd/blob/main/assets/themescreen2.png?raw=true)
+**Story Screen:**
 ![App Screenshot](https://github.com/KIKODER/impromptd/blob/main/assets/storyscreen.png?raw=true)
 
 
@@ -26,6 +29,7 @@
 - Play again functionality for replayability
 - Loading feedback while the AI generates content
 - Fully accessible keyboard navigation and clean UI
+
 ## Tech Stack
 
 **Client:** HTML, CSS, JavaScript (Vanilla), OpenAI API
